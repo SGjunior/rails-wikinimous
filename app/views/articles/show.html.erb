@@ -1,0 +1,19 @@
+<h2 class="article-title"><%= @article.title %></h2>
+<hr>
+<div class="row">
+  <div class="article-content-container">
+    <div class="article-content">
+      <%= @article.content %>
+    </div>
+  </div>
+</div>
+<hr>
+<%= link_to articles_path do %>
+<div class="btn btn-info float-right">Go back</div>
+<% end %>
+<%= link_to edit_article_path(@article) do %>
+<div class="btn btn-warning float-left">Edit</div>
+<% end %>
+<%= link_to(article_path(@article), method: :delete) do %>
+  <div class="btn btn-danger float-left" style="width: 100px; margin-left: 10px">Delete</div>
+<% end %>
